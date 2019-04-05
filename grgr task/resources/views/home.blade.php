@@ -25,6 +25,7 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Delete</th>
                                 <!-- <th>Quantity</th>
                                 <th>Status</th> -->
                             </tr>
@@ -43,6 +44,14 @@
                                     <td>  <span class="name">{{$user->id}}</span> </td>
                                     <td> <span class="product">{{$user->name}}</span> </td>
                                     <td><span class="count">{{$user->email}}</span></td>
+                                    
+                                    <td>
+                                        
+                                        <!-- <a type="submit" class="btn red btn-outline sbold delete_employee" employee_id="{{$user->id}}" href="#"> Delete Slider </a> -->
+                                        <button employee_id="{{$user->id}}" class="btn delete_employee" type="submit" name="delete_employee" id="delete_employee"  data-token="{{ csrf_token() }}" >delete</button> 
+                                        
+                                        
+                                    </td>
                                     <!-- <td>
                                         <span class="badge badge-complete">Complete</span>
                                     </td> -->
@@ -57,5 +66,24 @@
                 </div>
             </div> <!-- /.card -->
         </div>  <!-- /.col-lg-8 --></div></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            //alert('helllo from jquery');
+
+        $(document).on('click', '.delete_employee', function(){
+            var id=$(this).attr('employee_id');
+            alert(id);
+            $.ajax({
+                type: "GET",
+                url: "/admin/delete/employee/" + id,
+                processData: false,
+                contentType: false,
+
+                success: function(response) {
+                    alert("deleted");
+                }
+            });
+        });
+    </script>
 
 @endsection

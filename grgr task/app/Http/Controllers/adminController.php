@@ -14,4 +14,11 @@ class adminController extends Controller
         return view('home',compact('users'));
 
     }
+    public function deleteEmployeeById($id)
+    {
+        $user=users_model::find(2);
+        $user->delete();
+        return "done";
+    }
+    
 }

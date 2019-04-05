@@ -31,4 +31,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/listEmployees', 'AdminController@index')->name('list');
 
+Route::get('/admin/delete/employee/{id}','adminController@deleteEmployeeById');
 //Route::get('/admin/home','admin\homeController@index');
