@@ -16,7 +16,7 @@ class adminController extends Controller
     }
     public function deleteEmployeeById($id)
     {
-        $user=users_model::find(2);
+        $user=users_model::find($id);
         $user->delete();
         return "done";
     }
