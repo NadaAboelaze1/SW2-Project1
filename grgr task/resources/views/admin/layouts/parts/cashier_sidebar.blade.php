@@ -75,7 +75,7 @@
                 <ul class="nav navbar-nav">
 				
                     <li class="active">
-                        <a href="{{url('/home')}}" class="nav-link">
+                        <a href="{{url('home')}}" class="nav-link">
                             <i class="menu-icon fa fa-laptop"></i> Home</a>
                     </li>
                     <!-- <li>
@@ -83,8 +83,8 @@
                             <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
                     </li> -->
                     <li>
-                        <a href="{{url('/admin/listEmployees')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> List Employee</a>
+                        <a href="{{url('')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i> Orders</a>
                     </li>
    
                 </ul>
