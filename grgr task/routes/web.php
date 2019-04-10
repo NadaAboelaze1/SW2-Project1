@@ -20,7 +20,12 @@ Route::group(['middleware' => ['web','auth']], function(){
   Route::get('home', function() {
     if (Auth::user()->admin == 1) {
       return view('admin.home');
-    } else {
+    } else if(Auth::user()->admin == 2)
+	{
+		$users['users'] = App\User::all();
+      return view('branch_admin.home', $users);
+	}
+	else {
       $users['users'] = App\User::all();
       return view('cashier.home', $users);
     }
