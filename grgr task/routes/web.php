@@ -17,17 +17,14 @@ Route::group(['middleware' => ['web','auth']], function(){
       return view('auth.login');
   });
 
-  Route::get('home', function() {
-    if (Auth::user()->admin == 1) {
-      return view('admin.home');
-    } else if(Auth::user()->admin == 2)
-	{
-		$users['users'] = App\User::all();
-      return view('branch_admin.home', $users);
-	}
-	else {
+  Route::get('/home', function() {
+    if (Auth::user()->admin == 0) {
+      return view('cashier.home');
+    }else if (Auth::user()->admin == 2) {
+      return view('branch_admin.home');
+    }  else if (Auth::user()->admin == 1){
       $users['users'] = App\User::all();
-      return view('cashier.home', $users);
+      return view('admin.home', $users);
     }
   });
 });
@@ -40,6 +37,9 @@ Route::group(['middleware' => ['web','auth']], function(){
 Route::get('/register', function () {
     return view('auth.register');
 });
+Route::get('/branch_admin', function () {
+    return view('branch_admin.home');
+});
 
 
 //Route::get('/home', 'homecontroller@index')->name('home');
@@ -49,4 +49,9 @@ Auth::routes();
 Route::get('/admin/listEmployees', 'AdminController@index')->name('list');
 
 Route::get('/admin/delete/employee/{id}','adminController@deleteEmployeeById');
+
+Route::get('/branch_admin/listItems', 'ItemsController@list')->name('list');
+
+Route::get('/branch_admin/delete/item/{id}','ItemsController@deleteItemById');
+
 //Route::get('/admin/home','admin\homeController@index');
