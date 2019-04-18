@@ -11,7 +11,7 @@ class adminController extends Controller
     	$users = users_model::all();
     	$username = users_model::find('1');
 
-        return view('admin.list',compact('users'));
+        return view('home',compact('users'));
 
     }
     public function deleteEmployeeById($id)
@@ -19,6 +19,11 @@ class adminController extends Controller
         $user=users_model::find($id);
         $user->delete();
         return "done";
+    }
+    
+    public function AddEmployees()
+    {
+        return view('home')->with (compact('admin.register'));
     }
     
 }

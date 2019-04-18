@@ -86,7 +86,13 @@
                         <a href="{{url('/admin/listEmployees')}}" class="nav-link">
                             <i class="menu-icon fa fa-laptop"></i> List Employee</a>
                     </li>
-   
+   <li>
+                        <a href="{{ url('/admin/register') }}" class="nav-link"> 
+                            <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
+                             
+                    </li>
+                     
+                    
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
