@@ -1,4 +1,4 @@
-@extends('admin.layouts.app')
+@extends('admin.layouts.branch_admin_app')
 
 @section('content')
  <div class="orders">

@@ -20,6 +20,18 @@ class adminController extends Controller
         $user->delete();
         return "done";
     }
+
+    public function updateUser(Request $request)
+    {
+        $user=users_model::find($request->user_id_edit);
+
+        $user->name=$request->name_edit;
+        $user->email=$request->email_edit;
+
+        $user->save();
+
+        return "done";
+    }
     
     public function AddEmployees()
     {
