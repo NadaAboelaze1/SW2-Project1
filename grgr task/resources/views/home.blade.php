@@ -20,29 +20,42 @@
                     <table class="table">
                         <thead>
                             <tr>
-                               
+                                <th class="serial">#</th>
+                                <!-- <th class="avatar">Avatar</th> -->
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
-                                <th>Branch</th>
                                 <th>Delete</th>
-
+                                <!-- <th>Quantity</th>
+                                <th>Status</th> -->
                             </tr>
                         </thead>
                         <tbody>
                                 
                        @foreach($users as $user)
                        <tr>
+                                    <td class="serial">1.</td>
+                                    <!-- <td class="avatar">
+                                        <div class="round-img">
+                                            <a href="#"><img class="rounded-circle" src="images/avatar/1.jpg" alt=""></a>
+                                        </div>
+                                    </td> -->
+                                    <!-- <td> #5469 </td> -->
+                                    <td>  <span class="name">{{$user->id}}</span> </td>
+                                    <td> <span class="product">{{$user->name}}</span> </td>
+                                    <td><span class="count">{{$user->email}}</span></td>
                                     
-                            <td>  <span class="name">{{$user->id}}</span> </td>
-                            <td> <span class="product">{{$user->name}}</span> </td>
-                            <td><span class="count">{{$user->email}}</span></td>
-                            <td><span class="count">{{$user->branch_id}}</span></td>
-                            <td>
-                                <button employee_id="{{$user->id}}" class="btn delete_employee" type="submit" name="delete_employee" id="delete_employee"  data-token="{{ csrf_token() }}" >delete</button>    
-                                
-                            </td>
-                        </tr>
+                                    <td>
+                                        
+                                        <!-- <a type="submit" class="btn red btn-outline sbold delete_employee" employee_id="{{$user->id}}" href="#"> Delete Slider </a> -->
+                                        <button employee_id="{{$user->id}}" class="btn delete_employee" type="submit" name="delete_employee" id="delete_employee"  data-token="{{ csrf_token() }}" >delete</button> 
+                                        
+                                        
+                                    </td>
+                                    <!-- <td>
+                                        <span class="badge badge-complete">Complete</span>
+                                    </td> -->
+                                </tr>
 
                         @endforeach
                     </tbody>
