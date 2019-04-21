@@ -83,8 +83,8 @@
                             <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
                     </li> -->
                     <li>
-                        <a href="{{url('')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i>Branches</a>
+                        <a href="{{url('Branch\Items')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i>Items</a>
                     </li>
    
                 </ul>

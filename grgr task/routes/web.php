@@ -51,4 +51,8 @@ Route::get('/admin/listEmployees', 'AdminController@index')->name('list');
     //Route::get('/admin/register','AdminController@AddEmployees');
 
 Route::get('/admin/delete/employee/{id}','adminController@deleteEmployeeById');
+
+Route::get('/Branch/Items','itemsController@list');
+Route::get('/Branch/delete/item/{id}','itemsController@deleteItemById');
+
 //Route::get('/admin/home','admin\homeController@index');
