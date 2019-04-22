@@ -31,19 +31,23 @@
                             </tr>
                         </thead>
                         <tbody>
-                                
+
                        @foreach($items as $item)
                        <tr>
-                                    
+
                                     <td>  <span class="name">{{$item->id}}</span> </td>
                             <td> <span class="product">{{$item->name}}</span> </td>
                             <td><span class="count">{{$item->price}}</span></td>
                             <td><span class="count">{{$item->quantity}}</span></td>
                             <td>
-                                <button item_id="{{$item->id}}" class="btn delete_item" type="submit" name="delete_item" id="delete_item"  data-token="{{ csrf_token() }}" >delete</button>    
+                                <button item_id="{{$item->id}}" class="btn delete_item" type="submit" name="delete_item" id="delete_item"  data-token="{{ csrf_token() }}" >delete</button>
 
                             </td>
-                                   
+                            <td>
+                                <button item_id="{{$item->id}}" class="btn update_item" type="submit" name="update_item" id="update_item"  data-token="{{ csrf_token() }}" onclick="location.href='{{ url('/branch_admin/updateitem/'.$item->id) }}'"> update</button>
+
+                            </td>
+
                                     <!-- <td>
                                         <span class="badge badge-complete">Complete</span>
                                     </td> -->
@@ -53,7 +57,7 @@
                     </tbody>
                     </table>
                 </div>
-                        
+
                     </div> <!-- /.table-stats -->
                 </div>
             </div> <!-- /.card -->

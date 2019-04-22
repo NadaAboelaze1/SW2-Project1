@@ -57,6 +57,10 @@ Route::get('/admin/delete/employee/{id}','adminController@deleteEmployeeById');
 Route::get('/Branch/Items','itemsController@list');
 Route::get('/Branch/delete/item/{id}','itemsController@deleteItemById');
 
+Route::get('/home/additem','ItemsController@add_item');
+Route::post('/home/additem','ItemsController@add_item');
 
+Route::get('/branch_admin/updateitem/{id}','ItemsController@updateItem');
+Route::post('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 
 //Route::get('/admin/home','admin\homeController@index');
