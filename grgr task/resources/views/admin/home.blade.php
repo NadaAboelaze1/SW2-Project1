@@ -83,13 +83,27 @@
                     <div class="col-lg-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="box-title">Traffic </h4>
+                                <h4 class="box-title">Morning Text </h4>
                             </div>
                             <div class="row">
                                 <div class="col-lg-8">
                                     <div class="card-body">
                                         <!-- <canvas id="TrafficChart"></canvas>   -->
-                                        <div id="traffic-chart" class="traffic-chart"></div>
+                                        <div id="traffic-chart" class="traffic-chart">
+
+
+											<div class="msg stat2 col-md-10">
+												 <h4>Send A Message?</h4>
+												 <form id="sendMsg">
+													{{ csrf_field() }}
+
+													 <textarea class="form-control " id="msg" rows="4" name="msg"></textarea>
+													 <input class="btn-danger" type="submit" value="Send" name="send">
+												 </form>
+											 </div>
+
+
+										</div>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
@@ -129,6 +143,38 @@
                         </div>
                     </div><!-- /# column -->
                 </div>
+
+				<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>  
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+				<script src="{{asset('adminStyle/assets/global/plugins/jquery.min.js')}}" type="text/javascript"></script>
+
+				<script>
+
+					$(document).on('click', '#sendMsg', function(){
+						//var id=$(this).attr('employee_id');
+						$.ajax({
+							type: "POST",
+							url: '/admin/sendMessage',
+							data: new FormData( this ),
+							processData: false,
+							contentType: false,
+							success: function(response)
+							{
+								if(response=="done"){
+									alert("sssss");
+								}
+								else{
+									alert(response);
+								}
+							}
+						});
+					});
+
+
+					
+					
+
+				</script>
                 <!--  /Traffic -->
     <!-- <div class="page-content-wrapper"> -->
         <!-- BEGIN CONTENT BODY -->

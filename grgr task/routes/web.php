@@ -63,4 +63,6 @@ Route::post('/home/additem','ItemsController@add_item');
 Route::get('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 Route::post('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 
+Route::post('/admin/sendMessage','adminController@sendMessage');
+
 //Route::get('/admin/home','admin\homeController@index');
