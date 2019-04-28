@@ -27,6 +27,9 @@ class adminController extends Controller
 
         $user->name=$request->name_edit;
         $user->email=$request->email_edit;
+        $user->salary=$request->salary_edit;
+        $user->PhoneNumber=$request->phone_edit;
+        $user->Address=$request->address_edit;
 
         $user->save();
 
