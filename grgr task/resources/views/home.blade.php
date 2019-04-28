@@ -56,7 +56,7 @@
                                     <td>
                                         
                                         <!-- <a type="submit" class="btn red btn-outline sbold delete_employee" employee_id="{{$user->id}}" href="#"> Delete Slider </a> -->
-                                        <button employee_id="{{$user->id}}" class="btn edit_employee green btn-outline sbold edit_slider" type="submit" name="edit_employee" id="edit_employee" data-toggle="modal" href="#editEmployee"  data-token="{{ csrf_token() }}" >Edit</button> 
+                                        <button employee_id="{{$user->id}}" class="btn edit_employee green btn-outline sbold edit_slider" type="submit" name="edit_employee" id="edit_employee" data-toggle="modal" href="#editModal"  data-token="{{ csrf_token() }}" >Edit</button> 
 
                                         
                                     </td>
@@ -76,40 +76,56 @@
         </div>  <!-- /.col-lg-8 --></div></div>
 
         <!-- -->
-        <div class="modal fade" id="editEmployee" tabindex="-1" role="basic" aria-hidden="true">
+        <div class="modal fade" id="editModal" tabindex="-1" role="basic" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                    <h4 class="modal-title">Edit Slider</h4>
+                    <h4 class="modal-title">Edit User</h4>
                 </div>
-                <form id="editSlider">
+                <form id="editEmployee">
                     {{ csrf_field() }}
-                    <input type="hidden" id="Slider_id_edit" name="Slider_id_edit">
+                    <input type="hidden" id="user_id_edit" name="user_id_edit">
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Title 1</label>
+                            <label>Name</label>
                             <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-envelope"></i>
                             </span>
-                                <input type="text" name="title_1_edit" id="title_1_edit" class="form-control" placeholder="enter title one here"> </div>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="enter name here"> </div>
                         </div>
                         <div class="form-group">
-                            <label>Title 2</label>
+                            <label>E-mail</label>
                             <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-envelope"></i>
                             </span>
-                                <input type="text" name="title_2_edit" id="title_2_edit" class="form-control" placeholder="enter title one here"> </div>
+                                <input type="text" name="email_edit" id="email_edit" class="form-control" placeholder="enter E-mail here"> </div>
                         </div>
                         <div class="form-group">
-                            <label>Link</label>
+                            <label>Phone</label>
                             <div class="input-group">
                             <span class="input-group-addon">
                                 <i class="fa fa-envelope"></i>
                             </span>
-                                <input type="text" name="link_edit" id="link_edit" class="form-control" placeholder="enter link here"> </div>
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="enter phone here"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Salary</label>
+                            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                                <input type="text" name="salary" id="salary" class="form-control" placeholder="enter phone here"> </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Address</label>
+                            <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="fa fa-envelope"></i>
+                            </span>
+                                <input type="text" name="address" id="address" class="form-control" placeholder="enter address here"> </div>
                         </div>
                         
                     </div>
@@ -125,6 +141,7 @@
         <script>
             //alert('helllo from jquery');
         $("#editEmployee").submit(function(m) {
+            //alert("don't click me aiiiii");
             $.ajax({
                 type: "POST",
                 url: '/admin/UpdateEmployees',
