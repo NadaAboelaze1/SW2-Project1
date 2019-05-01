@@ -41,10 +41,12 @@ Route::get('/branch_admin/home', function () {
 //     return view('auth.register');
 // });
 
-Route::get('/admin/register', function () {
-    return view('admin.register');
-    //return "done";
-});
+//Route::get('/admin/register', function () {
+//    return view('admin.register');
+//    //return "done";
+//});
+
+
 
 // Route::get('/home/welcome', function () {
 //     return view('cashier.welcome');
@@ -75,5 +77,7 @@ Route::post('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 Route::post('/admin/sendMessage','AdminController@sendMessage');
 
 Route::get('/home/welcome','AdminController@showMsg');
+Route::get('/admin/addEmployee','AdminController@addEmployee');
+Route::post('/admin/addEmployee','AdminController@addEmployee');
 
 //Route::get('/admin/home','admin\homeController@index');
