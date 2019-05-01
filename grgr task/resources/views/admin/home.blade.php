@@ -161,11 +161,11 @@
 							success: function(response)
 							{
 								if(response=="done"){
-									alert("sssss");
+									alert("sent successfully");
 								}
-								else{
-									alert(response);
-								}
+								// else{
+								// 	alert(response);
+								// }
 							}
 						});
 					});

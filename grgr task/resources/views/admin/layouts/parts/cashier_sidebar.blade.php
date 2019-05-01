@@ -82,9 +82,10 @@
                         <a href="{{url('/admin/add')}}" class="nav-link">
                             <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
                     </li> -->
+
                     <li>
-                        <a href="{{url('')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> Orders</a>
+                        <a href="{{url('/home/welcome')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i>Welcome</a>
                     </li>
    
                 </ul>

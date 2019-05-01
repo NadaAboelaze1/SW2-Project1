@@ -1,4 +1,5 @@
 @extends('admin.layouts.cashier_app')
+
 @section('content')
     
 <style type="text/css">
@@ -22,7 +23,12 @@ img{
 
 
 </style>
-
+<!-- 
+ @foreach($msg as $m)
+                       @if($m->id==8)
+                            {{$m->msg_txt}}
+                        @endif
+                    @endforeach  -->
     <h1>HELLO CASHIER</h1>
 
     <div class="msg order">
@@ -30,9 +36,14 @@ img{
             <img class="img-circle" style="width: 90px;height: 90px;" src="{{asset('images/admin.jpg')}}">
             <div class="cont">
                 <p class="lead">
-                    Hello Employee 
                     
-                   
+
+                   @foreach($msg as $m)
+                       @if($m->id==8)
+                            {{$m->msg_txt}}
+                        @endif
+                    @endforeach 
+                    
                 </p>
             </div>
         </div>                       

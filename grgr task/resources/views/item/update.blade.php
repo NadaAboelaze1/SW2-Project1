@@ -20,21 +20,22 @@
 
 
    <body>
-     <br><br><br>
+<div style="padding: 0px 61px 64px;">
 <form action="/branch_admin/updateitem/{{$item->id}}"  method="post">
    <input type="hidden" name="_token" value="{{csrf_token()}}"/>
    Item :<br>
-    <input type="text" name="name" value="{{$item->name}}">
+    <input class="form-control" type="text" name="name" value="{{$item->name}}">
     <br>
     Price:<br>
-    <input type="number" name="price" value="{{$item->price}}" >
+    <input class="form-control" type="number" name="price" value="{{$item->price}}" >
     <br><br>
     Quantity:<br>
-    <input type="number" name="quantity" value="{{$item->quantity}}" >
+    <input class="form-control" type="number" name="quantity" value="{{$item->quantity}}" >
     <br><br>
-    <input  type="submit" value="update">
+    <input  class="btn btn-success btn-m"  type="submit" value="update">
 
   </form>
+</div>
 
    </body>
 

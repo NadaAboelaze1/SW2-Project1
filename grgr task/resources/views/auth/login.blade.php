@@ -66,9 +66,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         {{ csrf_field() }}
 
                     <div class="form-style-agile form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                        <label for="email" class="col-md-4 control-label" style="float: left;" ><i class="fas fa-user"></i> E-Mail Address</label>
 
-                        <div class="col-md-6">
+                        <div class="col-md-11">
                             <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                             @if ($errors->has('email'))
@@ -79,9 +79,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                     </div>
                     <div class="form-style-agile form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password" class="col-md-3 control-label" style="float: left;"><i class="fas fa-unlock-alt"></i>Password</label>
 
-                            <div class="col-md-6">
+                            <div class="col-md-11">
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -91,21 +91,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 @endif
                               </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
+                        <!-- <div class="form-group">
+                            <div class="col-md-6 col-md-offset-4"> -->
+                                <div class="col-md-12">
                                     <label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
                                     </label>
                                 </div>
-                            </div>
-                        </div>
-
+                            <!-- </div>
+                        </div> -->
+                        <div class="clear-fix"></div>
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Login
-                                </button>
+                            <div class="col-md-12">
+                                <input class="col-md-8" type="submit" value="Log In">
+                      
+                              
 
                                 <a class="btn btn-link" href="{{ route('password.request') }}">
                                     Forgot Your Password?

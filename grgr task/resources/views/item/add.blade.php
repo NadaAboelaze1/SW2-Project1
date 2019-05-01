@@ -20,22 +20,23 @@
 
 
    <body>
-     <br><br><br>
-<form action="additem" method="post">
-   <input type="hidden" name="_token" value="{{csrf_token()}}"/>
-   Item :<br>
-    <input type="text" name="name">
-    <br>
-    Price:<br>
-    <input type="number" name="price" >
-    <br><br>
-    Quantity:<br>
-    <input type="number" name="quantity" >
-    <br><br>
-    <input  type="submit" value="Add">
+<div style="padding: 0px 61px 64px;">
 
-  </form>
+  <form action="additem" method="post">
+     <input type="hidden" name="_token" value="{{csrf_token()}}"/>
+     Item :<br>
+      <input class="form-control"  type="text" name="name">
+      <br>
+      Price:<br>
+      <input  class="form-control" type="number" name="price" >
+      <br><br>
+      Quantity:<br>
+      <input class="form-control"  type="number" name="quantity" >
+      <br><br>
+      <input class="btn btn-success btn-xl"  type="submit" value="Add">
 
+    </form>
+</div>
    </body>
 
    </html>

@@ -23,7 +23,7 @@ class itemsController extends Controller
     public function add_item(Request $request)
     {
          if ($request->isMethod('post')) {
-           $newItem=new items_model();
+           $newItem=new items();
            $newItem->name=$request->input('name');
            $newItem->price=$request->input('price');
            $newItem->quantity=$request->input('quantity');
@@ -37,17 +37,17 @@ class itemsController extends Controller
     public function updateItem(Request $request , $id)
         {
        if ($request->isMethod('post')){
-         $newItem=items_model::find($id);
+         $newItem=items::find($id);
          $newItem->name=$request->input('name');
          $newItem->price=$request->input('price');
          $newItem->quantity=$request->input('quantity');
          $newItem->save();
 
-            return redirect("branch_admin/listItems");
+            return redirect("/Branch/Items");
 
         }
        else{
-          $item=items_model::find($id);
+          $item=items::find($id);
          $arr = array('item' =>$item);
 
 

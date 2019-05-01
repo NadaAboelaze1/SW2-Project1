@@ -25,6 +25,8 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Salary</th>
+                                <th>Phone Number</th>
                                 <th>Delete</th>
                                 <th>Edit</th>
                                 <!-- <th>Quantity</th>
@@ -45,6 +47,8 @@
                                     <td>  <span class="name">{{$user->id}}</span> </td>
                                     <td> <span class="product">{{$user->name}}</span> </td>
                                     <td><span class="count">{{$user->email}}</span></td>
+                                    <td> <span class="product">{{$user->salary}}</span> </td>
+                                    <td><span class="count">{{$user->PhoneNumber}}</span></td>
                                     
                                     <td>
                                         

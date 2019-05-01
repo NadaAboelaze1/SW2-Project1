@@ -26,6 +26,7 @@
                                 <th>Price</th>
                                 <th>quantity</th>
                                 <th>Delete</th>
+                                <th>Edit</th>
                                 <!-- <th>Quantity</th>
                                 <th>Status</th> -->
                             </tr>

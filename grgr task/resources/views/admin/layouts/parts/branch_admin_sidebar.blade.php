@@ -78,13 +78,13 @@
                         <a href="{{url('home')}}" class="nav-link">
                             <i class="menu-icon fa fa-laptop"></i> Home</a>
                     </li>
-                    <!-- <li>
-                        <a href="{{url('/admin/add')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
-                    </li> -->
+                    <li>
+                        <a href="{{url('/home/additem')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i> Add Item</a>
+                    </li>
                     <li>
                         <a href="{{url('Branch\Items')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i>Items</a>
+                            <i class="menu-icon fa fa-laptop"></i>List Items</a>
                     </li>
    
                 </ul>
