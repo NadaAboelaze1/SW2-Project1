@@ -12,11 +12,10 @@
 */
 Auth::routes();
 
-Route::get('/', function () {
+Route::group(['middleware' => ['web','auth']], function(){
+  Route::get('/', function () {
       return view('auth.login');
   });
-Route::group(['middleware' => ['web','auth']], function(){
-  
 
   Route::get('home', function() {
     if (Auth::user()->admin == 1) {
@@ -26,32 +25,22 @@ Route::group(['middleware' => ['web','auth']], function(){
 		$users['users'] = App\User::all();
       return view('branch_admin.home', $users);
 	}
-	else if(Auth::user()->admin == 0){
-      $msg = App\messages::find('4');
-      //$users['users'] = App\User::all();
-      return view('cashier.home', $msg);
+	else {
+      $users['users'] = App\User::all();
+      return view('cashier.home', $users);
     }
   });
 });
 
-Route::get('/branch_admin/home', function () {
-      return view('branch_admin.home');
-  });
+
 // Route::get('/admin/add', function () {
 //     return view('auth.register');
 // });
 
-//Route::get('/admin/register', function () {
-//    return view('admin.register');
-//    //return "done";
-//});
-
-
-
-// Route::get('/home/welcome', function () {
-//     return view('cashier.welcome');
-//     //return "done";
-// });
+Route::get('/admin/register', function () {
+    return view('admin.register');
+    //return "done";
+});
 
 
 //Route::get('/home', 'homecontroller@index')->name('home');
@@ -74,13 +63,8 @@ Route::post('/home/additem','ItemsController@add_item');
 Route::get('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 Route::post('/branch_admin/updateitem/{id}','ItemsController@updateItem');
 
-Route::post('/admin/sendMessage','AdminController@sendMessage');
-
-Route::get('/home/welcome','AdminController@showMsg');
-Route::get('/admin/addEmployee','AdminController@addEmployee');
-Route::post('/admin/addEmployee','AdminController@addEmployee');
 
 //Route::get('/admin/home','admin\homeController@index');
 
-Route::get('/admin/addEmployee','AdminController@addEmployee');
-Route::post('/admin/addEmployee','AdminController@addEmployee');
+Route::get('/home/make','orderController@all_items');
+Route::get('/home/make/{id}','orderController@all_items');

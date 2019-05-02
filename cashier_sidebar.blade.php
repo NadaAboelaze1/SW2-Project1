@@ -30,14 +30,6 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
    <style>
-   .right-panel header.header,.navbar .navbar-nav li > a, .navbar .main-menu , .right-panel .navbar-header, aside.left-panel, .navbar .navbar-nav,.navbar .navbar-nav > li.active {
-    background: #202121;
-    color: #cfdce2 !important;
-}
-
-
-
-
     #weatherWidget .currentDesc {
         color: #ffffff!important;
     }
@@ -81,38 +73,29 @@
         <nav class="navbar navbar-expand-sm navbar-default">
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-				
+
                     <li class="active">
-                        <a href="{{url('/home')}}" class="nav-link">
-                            <i class="menu-icon fa fa-home"></i> Home</a>
+                        <a href="{{url('home')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i> Home</a>
                     </li>
                     <!-- <li>
                         <a href="{{url('/admin/add')}}" class="nav-link">
                             <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
                     </li> -->
                     <li>
-                        <a href="{{url('/admin/listEmployees')}}" class="nav-link">
-                            <i class="menu-icon fa fa-users"></i> List Employee</a>
+                        <a href="{{url('')}}" class="nav-link">
+                            <i class="menu-icon fa fa-laptop"></i> Orders</a>
                     </li>
+                    <li>
+                      <a href="{{url('home/make')}}" class="nav-link">
+                        <i class="menu-icon fa fa-laptop"></i> Make Orders</a>
 
-<!--   <li>
-                        <a href="{{ url('/admin/register') }}" class="nav-link"> 
-                            <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
->>>>>>> 2c0bff26e296dadd57459b7e73c5eb1eafcf06aa
-                             
-                    </li>-->
-<li>
-                       <a href="{{ url('/admin/addEmployee') }}" class="nav-link">
-                           <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
-                           
                    </li>
-                     
-                    
                 </ul>
             </div><!-- /.navbar-collapse -->
         </nav>
     </aside>
-    
+
     <!-- /#left-panel -->
      <!-- <li class="nav-item">
         <a href="{{url('/admin/home')}}" class="nav-link">
