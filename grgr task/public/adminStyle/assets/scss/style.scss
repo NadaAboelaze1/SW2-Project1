@@ -275,7 +275,7 @@ canvas {
 /* Main Styles */
  
 aside.left-panel {
-    background: $menu-bg; 
+    background: #202121; 
     height: 100vh;
     // min-height: 100%;
     padding: 0;
@@ -305,7 +305,7 @@ aside.left-panel {
   
 
 .navbar {
-    background: $menu-bg;
+    background: #202121;
     border-radius: 0;
     border: none;
     display: inline-block;
@@ -404,7 +404,7 @@ aside.left-panel {
                     }
                 }
                 .sub-menu {
-                    background: $menu-bg;
+                    background: #202121;
                     border: none;
                     box-shadow: none;
                     overflow-y: hidden;
@@ -2766,3 +2766,9 @@ footer.site-footer {
         right: 20px !important;
     }
 } 
+
+
+
+.right-panel header.header {
+    background: #202121 !important;
+    }

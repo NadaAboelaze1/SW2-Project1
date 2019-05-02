@@ -98,7 +98,7 @@
 													{{ csrf_field() }}
 
 													 <textarea class="form-control " id="msg" rows="4" name="msg"></textarea>
-													 <input class="btn-danger" type="submit" value="Send" name="send">
+													 <input class="btn btn-xl btn-danger" style="margin: 10px" type="submit" value="Send" name="send">
 												 </form>
 											 </div>
 

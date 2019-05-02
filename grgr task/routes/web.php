@@ -77,3 +77,6 @@ Route::post('/admin/sendMessage','AdminController@sendMessage');
 Route::get('/home/welcome','AdminController@showMsg');
 
 //Route::get('/admin/home','admin\homeController@index');
+
+Route::get('/admin/addEmployee','AdminController@addEmployee');
+Route::post('/admin/addEmployee','AdminController@addEmployee');

@@ -30,6 +30,14 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
    <style>
+   .right-panel header.header,.navbar .navbar-nav li > a, .navbar .main-menu , .right-panel .navbar-header, aside.left-panel, .navbar .navbar-nav,.navbar .navbar-nav > li.active {
+    background: #202121;
+    color: #cfdce2 !important;
+}
+
+
+
+
     #weatherWidget .currentDesc {
         color: #ffffff!important;
     }
@@ -76,7 +84,7 @@
 				
                     <li class="active">
                         <a href="{{url('/home')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> Home</a>
+                            <i class="menu-icon fa fa-home"></i> Home</a>
                     </li>
                     <!-- <li>
                         <a href="{{url('/admin/add')}}" class="nav-link">
@@ -84,11 +92,11 @@
                     </li> -->
                     <li>
                         <a href="{{url('/admin/listEmployees')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> List Employee</a>
+                            <i class="menu-icon fa fa-users"></i> List Employee</a>
                     </li>
    <li>
-                        <a href="{{ url('/admin/register') }}" class="nav-link"> 
-                            <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
+                        <a href="{{ url('/admin/addEmployee') }}" class="nav-link"> 
+                            <i class="menu-icon fa fa-user"></i> Add Employee</a>
                              
                     </li>
                      

@@ -30,6 +30,10 @@
     <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.9.0/dist/fullcalendar.min.css" rel="stylesheet" />
 
    <style>
+   .right-panel header.header,.navbar .navbar-nav li > a, .navbar .main-menu , .right-panel .navbar-header, aside.left-panel, .navbar .navbar-nav,.navbar .navbar-nav > li.active {
+    background: #202121;
+    color: #cfdce2 !important;
+}
     #weatherWidget .currentDesc {
         color: #ffffff!important;
     }
@@ -76,7 +80,7 @@
 				
                     <li class="active">
                         <a href="{{url('home')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i> Home</a>
+                            <i class="menu-icon fa fa-home"></i> Home</a>
                     </li>
                     <!-- <li>
                         <a href="{{url('/admin/add')}}" class="nav-link">
@@ -85,7 +89,7 @@
 
                     <li>
                         <a href="{{url('/home/welcome')}}" class="nav-link">
-                            <i class="menu-icon fa fa-laptop"></i>Welcome</a>
+                            <i class="menu-icon fa fa-user"></i>Welcome</a>
                     </li>
    
                 </ul>

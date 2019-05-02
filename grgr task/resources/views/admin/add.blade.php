@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,8 @@
                 <div class="panel-heading">Register</div>
 
                 <div class="panel-body">
-                    <form class="form-horizontal" method="POST" action="{{ route('register') }}">
+                    <form class="form-horizontal" action="addEmployee" method="post">
+                        
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -58,6 +59,106 @@
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="age" class="col-md-4 control-label">age</label>
+
+                            <div class="col-md-6">
+                                <input id="age" type="age" class="form-control" name="age" required>
+
+                                @if ($errors->has('age'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('age') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        <div class="form-group{{ $errors->has('Address') ? ' has-error' : '' }}">
+                            <label for="Address" class="col-md-4 control-label">Address</label>
+
+                            <div class="col-md-6">
+                                <input id="Address" type="Address" class="form-control" name="Address" value="{{ old('Address') }}" required>
+
+                                @if ($errors->has('Address'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('Address') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        
+                        <div class="form-group{{ $errors->has('PhoneNumber') ? ' has-error' : '' }}">
+                            <label for="PhoneNumber" class="col-md-4 control-label">Phone Number</label>
+
+                            <div class="col-md-6">
+                                <input id="PhoneNumber" type="PhoneNumber" class="form-control" name="PhoneNumber" value="{{ old('PhoneNumber') }}" required>
+
+                                @if ($errors->has('PhoneNumber'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('PhoneNumber') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('Gender') ? ' has-error' : '' }}">
+                            <label for="Gender" class="col-md-4 control-label">Gender</label>
+
+                            <div class="col-md-6">
+                                <input id="Gender" type="Gender" class="form-control" name="Gender" value="{{ old('Gender') }}" required>
+
+                                @if ($errors->has('Gender'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('Gender') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('salary') ? ' has-error' : '' }}">
+                            <label for="salary" class="col-md-4 control-label">salary</label>
+
+                            <div class="col-md-6">
+                                <input id="salary" type="salary" class="form-control" name="salary" value="{{ old('salary') }}" required>
+
+                                @if ($errors->has('salary'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('salary') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        
+                        
+                        <div class="form-group{{ $errors->has('branch_id') ? ' has-error' : '' }}">
+                            <label for="branch_id" class="col-md-4 control-label">Branch ID</label>
+
+                            <div class="col-md-6">
+                                <input id="branch" type="branch_id" class="form-control" name="branch_id" value="{{ old('branch_id') }}" required>
+
+                                @if ($errors->has('branch_id'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('branch_id') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+                        
+                        <div class="form-group{{ $errors->has('admin') ? ' has-error' : '' }}">
+                            <label for="admin" class="col-md-4 control-label">Admin</label>
+
+                            <div class="col-md-6">
+                                <input id="branch" type="admin" class="form-control" name="admin" value="{{ old('admin') }}" required>
+
+                                @if ($errors->has('admin'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('admin') }}</strong>
+                                    </span>
+                                @endif
                             </div>
                         </div>
 
