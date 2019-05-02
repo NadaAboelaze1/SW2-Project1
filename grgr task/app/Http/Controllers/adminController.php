@@ -51,30 +51,27 @@ class adminController extends Controller
         return "done";
     }
     
-<<<<<<< HEAD
+    public function addEmployee(Request $request)
+    {
+        if ($request->isMethod('post')) {
+           $newEmp=new users_model();
+           $newEmp->name=$request->input('name');
+           $newEmp->email= $request->input('email');
+           $newEmp->password= $request->input('password');
+           $newEmp->admin = $request->input('admin');
+           $newEmp->branch_id = $request->input('branch_id');
+           $newEmp->salary = $request->input('salary');
+           $newEmp->Gender = $request->input('Gender');
+           $newEmp->PhoneNumber = $request->input('PhoneNumber');
+           $newEmp->Address = $request->input('Address');
+           //$newEmp->DateOfBirth = $request->input('DateOfBirth');
+           $newEmp->age = $request->input('age');
 
-   public function addEmployee(Request $request)
-   {
-       if ($request->isMethod('post')) {
-          $newEmp=new users_model();
-          $newEmp->name=$request->input('name');
-          $newEmp->email= $request->input('email');
-          $newEmp->password= $request->input('password');
-          $newEmp->admin = $request->input('admin');
-          $newEmp->branch_id = $request->input('branch_id');
-          $newEmp->salary = $request->input('salary');
-          $newEmp->Gender = $request->input('Gender');
-          $newEmp->PhoneNumber = $request->input('PhoneNumber');
-          $newEmp->Address = $request->input('Address');
-          $newEmp->DateOfBirth = $request->input('DateOfBirth');
-          $newEmp->age = $request->input('age');
+          $newEmp->save();
 
-         $newEmp->save();
-
-       }
-       return view('admin.add');
-   }
->>>>>>> 2c0bff26e296dadd57459b7e73c5eb1eafcf06aa
+        }
+        return view('admin.add');
+    }
 
 	public function sendMessage(Request $request)
     {

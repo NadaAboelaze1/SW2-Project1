@@ -84,3 +84,6 @@ Route::post('/admin/addEmployee','AdminController@addEmployee');
 
 Route::get('/admin/addEmployee','AdminController@addEmployee');
 Route::post('/admin/addEmployee','AdminController@addEmployee');
+
+
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout' );

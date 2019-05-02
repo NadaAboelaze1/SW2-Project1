@@ -94,18 +94,11 @@
                         <a href="{{url('/admin/listEmployees')}}" class="nav-link">
                             <i class="menu-icon fa fa-users"></i> List Employee</a>
                     </li>
-
-<!--   <li>
-                        <a href="{{ url('/admin/register') }}" class="nav-link"> 
-                            <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
->>>>>>> 2c0bff26e296dadd57459b7e73c5eb1eafcf06aa
+   <li>
+                        <a href="{{ url('/admin/addEmployee') }}" class="nav-link"> 
+                            <i class="menu-icon fa fa-user"></i> Add Employee</a>
                              
-                    </li>-->
-<li>
-                       <a href="{{ url('/admin/addEmployee') }}" class="nav-link">
-                           <i class="menu-icon fa fa-laptop"></i> Add Employee</a>
-                           
-                   </li>
+                    </li>
                      
                     
                 </ul>
